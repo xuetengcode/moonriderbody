@@ -1,32 +1,5 @@
 # Alienware Setup
 
-### update ip address
-```
-D:/shared/moonrider_bino/src/components/punch.js
-D:/shared/moonrider_mono/src/components/punch.js
-```
-L101: change the ip address to your host machine's IP.
-```
-fetch('https://10.0.0.24:4000/save-logs', {
-    method: 'POST',
-    body: JSON.stringify({ logs: logFile }),
-    headers: {
-        'Content-Type': 'application/json'
-    }
-})
-```
-change to
-```
-fetch('https://<ip>:4000/save-logs', {
-    method: 'POST',
-    body: JSON.stringify({ logs: logFile }),
-    headers: {
-        'Content-Type': 'application/json'
-    }
-})
-```
-
-
 start the app called ```Docker Desktop```
 
 # start container
@@ -84,6 +57,33 @@ Headset browser go to:
 ```
 https://<ip>:3000
 ```
+### update ip address
+```
+D:/shared/moonrider_bino/src/components/punch.js
+D:/shared/moonrider_mono/src/components/punch.js
+```
+L101: change the ip address to your host machine's IP.
+```
+fetch('https://10.0.0.24:4000/save-logs', {
+    method: 'POST',
+    body: JSON.stringify({ logs: logFile }),
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+```
+change to
+```
+fetch('https://<ip>:4000/save-logs', {
+    method: 'POST',
+    body: JSON.stringify({ logs: logFile }),
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+```
+
+
 
 ### Summary
 Both of above service have to be started. The collected data will be saved in ```/receiver``` folder, called ```logs.txt```
