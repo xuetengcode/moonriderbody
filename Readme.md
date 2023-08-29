@@ -7,14 +7,14 @@ bash
 ```
 ### tmux
 ```
-cd shared/moonrider
+cd shared/moonrider_bino
 tmux
 ```
 
 In tmux view:
 
-- ```ctrl+B then quickly type %```: cut the screen from middle-col
-- ```ctrl+B then quickly type "```: cut the screen from middle-row
+- ```ctrl+B then quickly type %```: cut the screen into left-right windows
+- ```ctrl+B then quickly type "```: cut the screen into top-bottom windows
 ### Main project
 (in the container)
 ```
