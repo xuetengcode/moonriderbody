@@ -1,5 +1,5 @@
 module.exports = [
-  {name: 'favorites', author: 'You!', title: 'Your Saved Favorites'},
+  {name: 'favorites', author: 'VR Perception Lab', title: 'Gain Adaptation'},
   {name: '3966', author: 'BeastSaber', title: 'Songs With Fantastic Flow Vol. 1'},
   {name: '3967', author: 'BeastSaber', title: 'Songs With Fantastic Flow Vol. 2'},
   {name: '3968', author: 'BeastSaber', title: 'Songs With Fantastic Flow Vol. 3'},
