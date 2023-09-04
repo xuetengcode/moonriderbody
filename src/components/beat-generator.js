@@ -283,7 +283,7 @@ AFRAME.registerComponent('beat-generator', {
     if (!beatEl) { return; }
 
     // Entity was just created.
-    if (noteInfo._time - this.prevBeatPosition < 0.1) return
+    if (Math.abs(noteInfo._time - this.prevBeatPosition) < 0.1) return
 
     if (!beatEl.components.beat && !beatEl.components.plume) {
       setTimeout(() => {
