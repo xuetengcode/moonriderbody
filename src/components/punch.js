@@ -98,7 +98,7 @@
   function sendLogsToServer() {
     if (logFile.length === 0) return;
 
-    fetch('https://130.63.92.199:4000/save-logs', {
+    fetch('http://localhost:4000/save-logs', {
         method: 'POST',
         body: JSON.stringify({ logs: logFile }),
         headers: {
@@ -106,16 +106,16 @@
         }
     })
     .then(response => {
-      if (!response.ok) {
-          throw new Error('Server response was not ok.');
-      }
-      // Clear the logs once sent.
-      logFile.length = 0;
+        if (!response.ok) {
+            throw new Error('Server response was not ok.');
+        }
+        // Clear the logs once sent.
+        logFile.length = 0;
     })
     .catch(error => {
-      console.error("Error sending logs:", error);
+        console.error("Error sending logs:", error);
     });
-  }
+	}
 
   // Send logs every 5 minutes (300000 ms).
   setInterval(sendLogsToServer, 10000);

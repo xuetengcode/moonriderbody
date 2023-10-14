@@ -1,5 +1,5 @@
 # Logs
-logs.txt
+*logs.txt
 receiver/logs.txt
 /receiver/logs.txt
 *.log
