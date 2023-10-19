@@ -507,24 +507,24 @@ AFRAME.registerState({
         if (['90Degree', '360Degree'].includes(characteristic)) continue;
 
         for (const difficulty of Object.keys(characteristics[characteristic])) {
+          if (['Normal', 'Easy'].includes(difficulty)) {
+            if (characteristics[characteristic][difficulty] === null) continue;
 
-          if (characteristics[characteristic][difficulty] === null) continue;
+            let difficultyName = difficultyMap[difficulty];
+            let renderName = difficultyName;
 
-          let difficultyName = difficultyMap[difficulty];
-          let renderName = difficultyName;
-
-          if (characteristic !== 'Standard') {
-            renderName = characteristic + '\n' + renderName;
+            if (characteristic !== 'Standard') {
+              renderName = characteristic + '\n' + renderName;
+            }
+            state.menuDifficulties.unshift({
+              'id': characteristic + '-' + difficulty,
+              'filename': /* fileDifficultyMap[ */difficulty/* ] */ + characteristic,
+              'difficultyName': difficultyName,
+              'renderName': renderName,
+              'beatmapCharacteristic': characteristic,
+              'difficulty': difficulty,
+            })
           }
-          state.menuDifficulties.unshift({
-            'id': characteristic + '-' + difficulty,
-            'filename': /* fileDifficultyMap[ */difficulty/* ] */ + characteristic,
-            'difficultyName': difficultyName,
-            'renderName': renderName,
-            'beatmapCharacteristic': characteristic,
-            'difficulty': difficulty,
-          })
-
         }
       }
       
