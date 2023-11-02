@@ -1,10 +1,7 @@
 # Logs
-
 *logs.txt
 receiver/logs.txt
 /receiver/logs.txt
-receiver/*.xlsx
-receiver/*.txt
 *.log
 npm-debug.log*
 debug/
