@@ -1,3 +1,19 @@
+
+copy folder **shared** to your computer
+
+# Docker
+## Load Docker Image
+
+```
+cd [path to **shared**]
+docker load < moonriderbody.tar
+```
+
+## Start Container
+```
+docker run -tid -v [local path]:/workspace/shared -p 3000:3000 -p 4000:4000 moonriderbody bash
+```
+
 # start host
 ### Steps
 Start the app called ```Docker Desktop```
@@ -32,31 +48,6 @@ Open browser, go to:
 https://130.63.97.216:3000
 ```
 Open folder ```c/Project/moonrider/receiver``` folder, change the name of ```logs.txt``` into ```participant_initial.txt```
-### update ip address
-```
-/src/components/punch.js
-```
-L101: change the ip address to your host machine's IP.
-```
-fetch('https://10.0.0.24:4000/save-logs', {
-    method: 'POST',
-    body: JSON.stringify({ logs: logFile }),
-    headers: {
-        'Content-Type': 'application/json'
-    }
-})
-```
-change to
-```
-fetch('https://<ip>:4000/save-logs', {
-    method: 'POST',
-    body: JSON.stringify({ logs: logFile }),
-    headers: {
-        'Content-Type': 'application/json'
-    }
-})
-```
-
 
 
 
