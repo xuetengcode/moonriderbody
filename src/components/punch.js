@@ -98,7 +98,7 @@
   function sendLogsToServer() {
     if (logFile.length === 0) return;
 
-    fetch('http://localhost:4000/save-logs', {
+    fetch('https://10.0.0.147:4000/save-logs', {
         method: 'POST',
         body: JSON.stringify({ logs: logFile }),
         headers: {

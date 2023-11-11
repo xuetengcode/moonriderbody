@@ -324,7 +324,7 @@ AFRAME.registerComponent('beat', {
     this.el.appendChild(this.blockEl);
     this.initMesh();
 
-    console.log('[debug] data type: ', this.data.type);
+    //console.log('[debug] data type: ', this.data.type);
     if (this.data.type === MINE) {
       this.poolName = 'pool__beat-mine';
     } else {
